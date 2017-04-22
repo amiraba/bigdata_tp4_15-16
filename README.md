@@ -28,11 +28,20 @@ Un keyspace est un regroupement de famille de colonnes. Il s'agit d'une sorte de
 #### Maps
 ![screenshot from 2017-04-22 20-08-37](https://cloud.githubusercontent.com/assets/23452983/25308970/4e8adf1a-27b8-11e7-95af-5819f428349d.png)
 
-## Partie 2 - Pycassa
+## Partie 2 - Pycassa - Thrift
 
-![screenshot from 2017-04-22 22-41-43](https://cloud.githubusercontent.com/assets/23452983/25308972/5621df8a-27b8-11e7-94a0-416840658ca0.png)
+Afin d'effectuer le lien de Python avec la base cassandra, certains prérequis doivent êtres présents lors de l'installation:
+- Cassandra doit être active sur le port 9160 à travers `nodetool enablethrift` après `apt-get install thrift`.
+Thrift est indispensable car c'est l'IDL qui permet la portabilité de l'accès à Cassandra de manière indépendante du langage utilisé afin de faciliter sa communication avec d'autres composants logiciels, notamment du code Python.
 ![screenshot from 2017-04-22 22-43-36](https://cloud.githubusercontent.com/assets/23452983/25308981/7441546e-27b8-11e7-85e9-a0a4f12c4354.png)
-
+- Installation classique de pycassa
+```
+git clone git://github.com/pycassa/pycassa.git
+$ cd pycassa/
+$ sudo python setup.py install
+```
+- N'oublions pas d'inclure `WITH COMPACT STORAGE` lors de la création de notre famille de colonnes sur Cassandra
+![screenshot from 2017-04-22 22-41-43](https://cloud.githubusercontent.com/assets/23452983/25308972/5621df8a-27b8-11e7-94a0-416840658ca0.png)
 
 ![screenshot from 2017-04-22 22-43-09](https://cloud.githubusercontent.com/assets/23452983/25308978/63019cf4-27b8-11e7-821f-332c0ed7f134.png)
 
@@ -46,7 +55,7 @@ Un keyspace est un regroupement de famille de colonnes. Il s'agit d'une sorte de
 
 ![screenshot from 2017-04-22 22-53-53](https://cloud.githubusercontent.com/assets/23452983/25308990/afebb11c-27b8-11e7-858f-fd64437c39a0.png)
 
-Objectif du TP
+## Objectif du TP
 
 ![screenshot from 2017-04-22 23-40-18](https://cloud.githubusercontent.com/assets/23452983/25308992/b44607bc-27b8-11e7-8cf4-3931bc1939e9.png)
 
