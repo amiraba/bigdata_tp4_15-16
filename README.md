@@ -73,5 +73,6 @@ $ sudo python setup.py install
 
 # Conclusion
 
-Grâce à ce TP, nous avons pu déceler le fonctionnement d'une des plus populaires bases de données orientées colonnes "Cassandra". On a pu voir de près non seulement sa structure mais aussi pourquoi elle est qualifiée de "la base la plus rapide". En effet, l'ajout des milliers de versets de la bible n'a pris que 4 secondes, ce qui est considérablement plus optimisé par rapport à d'autres bases de données.
+Grâce à ce TP, nous avons pu déceler le fonctionnement d'une des bases de données orientées colonnes les plus populaires "Cassandra". On a pu voir de près non seulement sa structure mais aussi pourquoi elle est qualifiée de "la plus rapide". En effet, l'ajout des milliers de versets de la bible n'a pris que 4 secondes, ce qui est considérablement plus optimisé par rapport à d'autres bases de données.
+
 Certes, si on devait modifier les colonnes, on aurait procédé par un décalage lourd de tout le volume de données. Mais , dans notre cas, et conformément au usecase demandé (Remplissage de la base par des versets), elle s'avère la plus performante.
